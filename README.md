@@ -70,9 +70,22 @@ public class MoodManager : MonoBehaviour
 
 ```
 
-## Example of mock data.json
+## Observer interface for objects need to listen to mood changes
+```csharp
+public enum Mood
+{
+    Sad,
+    Calm
+}
+
+public interface IMoodObserver
+{
+    void OnMoodChanged(Mood newMood);
+}
 ```
-json
+
+## Example of mock data.json
+```json
 [
   {
     "title": "You are my bestie :)",
